@@ -55,9 +55,10 @@ export const ScheduleSection: React.FC = () => {
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
+
   const scheduleItems = [
     {
-      time: "5th July",
+      time: "17th December",
       title: "REGISTRATION OPENS",
       description: "Teams can start registering on the portal",
       icon: Users,
@@ -65,7 +66,7 @@ export const ScheduleSection: React.FC = () => {
       day: "Phase 1",
     },
     {
-      time: "19th July",
+      time: "29th December",
       title: "REGISTRATION CLOSES",
       description: "Last date to register",
       icon: Clock,
@@ -73,57 +74,41 @@ export const ScheduleSection: React.FC = () => {
       day: "Phase 1",
     },
     {
-      time: "20th July",
-      title: "PPT SUBMISSION ROUND STARTS",
-      description: "Submission window opens for idea presentations",
+      time: "26th - 31st December",
+      title: "PPT SUBMISSION ROUND",
+      description: "Submit your idea presentations during this window",
       icon: Calendar,
       color: "green",
       day: "Phase 2",
     },
     {
-      time: "25th July",
-      title: "PPT SUBMISSION ROUND ENDS",
-      description: "Last day to submit PPTs",
-      icon: Calendar,
-      color: "orange",
-      day: "Phase 2",
-    },
-    {
-      time: "4th August",
-      title: "PPT ROUND RESULTS ANNOUNCEMENT",
+      time: "2nd January",
+      title: "PPT ROUND RESULTS",
       description: "Selected teams for prototype round are announced",
       icon: Trophy,
       color: "yellow",
       day: "Phase 2",
     },
     {
-      time: "5th August",
-      title: "PROTOTYPE ROUND BEGINS",
-      description: "Shortlisted teams start working on prototypes",
+      time: "4th - 10th January",
+      title: "PROTOTYPE ROUND",
+      description: "Shortlisted teams work on and submit prototypes",
       icon: Users,
       color: "purple",
       day: "Phase 3",
     },
     {
-      time: "22nd August",
-      title: "PROTOTYPE ROUND ENDS",
-      description: "Last date for prototype submission",
-      icon: Clock,
-      color: "red",
-      day: "Phase 3",
-    },
-    {
-      time: "30th August",
+      time: "12th January",
       title: "PROTOTYPE ROUND RESULTS",
-      description: "Finalist teams announced (Top 40-50 teams)",
+      description: "Finalist teams announced for the final showdown",
       icon: Trophy,
-      color: "yellow",
+      color: "orange",
       day: "Phase 3",
     },
     {
-      time: "11th - 13th Sept",
-      title: "OFFLINE FINAL HACKATHON",
-      description: "8-hour hackathon at GLA University Noida Campus",
+      time: "17th January",
+      title: "OFFLINE FINAL ROUND",
+      description: "Final hackathon at GLA University",
       icon: MapPin,
       color: "blue",
       day: "Final Phase",
@@ -139,13 +124,14 @@ export const ScheduleSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 font-orbitron">
             MISSION TIMELINE
-          </h2>{" "}
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Multi-stage competition spanning from July to September. Follow the
-            complete journey from registration to the final 48-hour hackathon at
+            Multi-stage competition spanning from December to January. Follow the
+            complete journey from registration to the final hackathon at
             GLA University.
           </p>
-        </div>{" "}
+        </div>
+
         {/* Timeline Container */}
         <div className="relative">
           {/* Central Timeline Line */}
@@ -153,7 +139,6 @@ export const ScheduleSection: React.FC = () => {
 
           {days.map((day) => (
             <div key={day} className="mb-16">
-              {" "}
               {/* Phase Header */}
               <div className="text-center mb-12 relative">
                 {/* Background glow effect */}
@@ -175,9 +160,9 @@ export const ScheduleSection: React.FC = () => {
                   <div className="absolute inset-0 w-6 h-6 bg-purple-400 rounded-full animate-ping opacity-30"></div>
                 </div>
               </div>
+
               {/* Day Events */}
               <div className="space-y-8">
-                {" "}
                 {scheduleItems
                   .filter((item) => item.day === day)
                   .map((item, index) => {
@@ -248,6 +233,7 @@ export const ScheduleSection: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-8 border border-purple-500/30">
@@ -255,17 +241,17 @@ export const ScheduleSection: React.FC = () => {
               READY TO JOIN THE MULTIVERSE?
             </h3>
             <p className="text-gray-300 mb-6">
-              Save the date and prepare for 48 hours of legendary innovation.
+              Save the date and prepare for an epic innovation showdown at GLA University.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => {
                   const event = {
-                    title: 'Marvel Multiverse Hackathon',
-                    start: '2025-09-11T09:00:00',
-                    end: '2025-09-13T18:00:00',
-                    description: '8-hour hackathon at GLA University Noida Campus',
-                    location: 'GLA University, Noida Campus'
+                    title: 'Marvel Multiverse Hackathon - Final Round',
+                    start: '2026-01-17T09:00:00',
+                    end: '2026-01-17T18:00:00',
+                    description: 'Final hackathon round at GLA University',
+                    location: 'GLA University'
                   };
                   
                   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.start.replace(/[-:]/g, '')}/${event.end.replace(/[-:]/g, '')}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
@@ -277,11 +263,11 @@ export const ScheduleSection: React.FC = () => {
                 ADD TO CALENDAR
               </button>
               <button 
-                onClick={() => window.open('https://maps.app.goo.gl/Sm1ttCfNViM7UboY8', '_blank')}
+                onClick={() => window.open('https://share.google/ClT8ALVfKGH0e1exT', '_blank')}
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200"
               >
                 <MapPin className="w-5 h-5 inline mr-2" />
-                GET DIRECTIONS
+                GLA UNIVERSITY
               </button>
             </div>
           </div>

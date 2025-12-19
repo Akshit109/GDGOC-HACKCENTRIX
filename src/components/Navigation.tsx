@@ -19,9 +19,9 @@ export const Navigation: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navOffset = 80; // height of fixed navbar
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navOffset;
+      const navbarHeight = 80; // Fixed navbar height
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
 
       window.scrollTo({
         top: offsetPosition,
@@ -36,19 +36,19 @@ export const Navigation: React.FC = () => {
     { name: 'About', href: 'about', type: 'scroll' },
     { name: 'Vision', href: 'vision', type: 'scroll' },
     { name: 'Tracks', href: 'tracks', type: 'scroll' },
-    { name: 'Prizes', href: 'prizes', type: 'scroll' },
+  
     { name: 'Schedule', href: 'schedule', type: 'scroll' },
     { name: 'Mentors', href: 'mentors', type: 'modal' },
     { name: 'FAQs', href: 'faqs', type: 'modal' }
   ];
 
-  const handleNavClick = (item: any) => {
+  const handleNavClick = (item: typeof navItems[0]) => {
     if (item.type === 'scroll') {
       scrollToSection(item.href);
     } else if (item.type === 'modal') {
       setActiveModal(item.href);
+      setIsMobileMenuOpen(false);
     }
-    setIsMobileMenuOpen(false);
   };
 
   const renderModalContent = () => {
@@ -145,7 +145,7 @@ export const Navigation: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="flex space-x-1">
                 <div className="relative">
                   <Zap className="w-6 h-6 text-yellow-400 animate-pulse" />
@@ -175,7 +175,7 @@ export const Navigation: React.FC = () => {
                 </button>
               ))}
               <a
-                href="https://vision.hack2skill.com/event/preview/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage"
+                href="https://vision.hack2skill.com/event/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage&sectionid=6936ebffe1c95bfec03278c0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200 relative overflow-hidden group"
@@ -189,14 +189,15 @@ export const Navigation: React.FC = () => {
             <button
               className="md:hidden text-white relative z-10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
               <div className="relative">
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 animate-spin-slow" />
+                  <X className="w-6 h-6" />
                 ) : (
-                  <Menu className="w-6 h-6 animate-pulse" />
+                  <Menu className="w-6 h-6" />
                 )}
-                <div className="absolute inset-0 w-6 h-6 bg-blue-400 rounded-full blur-lg opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 w-6 h-6 bg-blue-400 rounded-full blur-lg opacity-20"></div>
               </div>
             </button>
           </div>
@@ -217,10 +218,11 @@ export const Navigation: React.FC = () => {
                   </button>
                 ))}
                 <a
-                  href="https://vision.hack2skill.com/event/preview/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage"
+                  href="https://vision.hack2skill.com/event/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage&sectionid=6936ebffe1c95bfec03278c0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200 relative overflow-hidden group"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200 relative overflow-hidden group text-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span className="relative z-10">JOIN NOW</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-red-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

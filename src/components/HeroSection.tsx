@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
       registrationStart.setHours(18, 0, 0, 0);
 
       // Registration End: 8 Jan 2026
-      const registrationEnd = new Date("2025-12-23T23:59:59");
+      const registrationEnd = new Date("2025-12-29T23:59:59");
 
       const targetDate = registrationEnd.getTime();
 
@@ -147,7 +147,7 @@ export const HeroSection: React.FC = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
-            href="https://vision.hack2skill.com/event/preview/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage"
+            href="https://vision.hack2skill.com/event/gdgoc-25-hackcentrix?utm_source=hack2skill&utm_medium=homepage&sectionid=6936ebffe1c95bfec03278c0"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-10 py-5 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-bold text-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -183,7 +183,7 @@ export const HeroSection: React.FC = () => {
             </span>{" "}
             • Registration ends on{" "}
             <span className="text-red-400 font-bold">
-              December 23rd, 2025
+              December 29th, 2025
             </span>{" "}
             •{" "}
             <span className="text-yellow-400 font-bold">
