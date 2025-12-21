@@ -149,7 +149,7 @@ export const VisionSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <button 
-                onClick={() => window.open('https://www.instagram.com/reel/DLZbFcFThx0/', '_blank')}
+                onClick={() => window.open('https://www.instagram.com/reel/DSc4zHqk-ar/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==', '_blank')}
                 className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200 relative overflow-hidden group"
               >
                 <span className="relative z-10">THINK DEEPER</span>

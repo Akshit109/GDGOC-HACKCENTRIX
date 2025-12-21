@@ -162,7 +162,7 @@ export const HeroSection: React.FC = () => {
 
           <button className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-xl rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <a
-              href="https://www.instagram.com/reel/DLZbFcFThx0/"
+              href="https://www.instagram.com/reel/DSc4zHqk-ar/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-10 flex items-center"

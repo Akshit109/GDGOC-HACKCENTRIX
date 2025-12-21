@@ -1,5 +1,5 @@
 import React from "react";
-import { Clock, Calendar, MapPin, Users, Trophy } from "lucide-react";
+import { Clock, Calendar, MapPin, Users, Trophy, FileText, Award } from "lucide-react";
 
 export const ScheduleSection: React.FC = () => {
   const getColorClasses = (color: string) => {
@@ -52,39 +52,55 @@ export const ScheduleSection: React.FC = () => {
         node: "from-orange-400 to-orange-600",
         ping: "bg-orange-400",
       },
+      cyan: {
+        border: "border-cyan-500/30 hover:border-cyan-400",
+        bg: "from-cyan-500 to-cyan-600",
+        text: "text-cyan-400",
+        glow: "from-cyan-500/10 to-cyan-600/10",
+        node: "from-cyan-400 to-cyan-600",
+        ping: "bg-cyan-400",
+      },
+      pink: {
+        border: "border-pink-500/30 hover:border-pink-400",
+        bg: "from-pink-500 to-pink-600",
+        text: "text-pink-400",
+        glow: "from-pink-500/10 to-pink-600/10",
+        node: "from-pink-400 to-pink-600",
+        ping: "bg-pink-400",
+      },
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.blue;
   };
 
   const scheduleItems = [
     {
-      time: "17th December",
-      title: "REGISTRATION OPENS",
-      description: "Teams can start registering on the portal",
+      time: "5th - 29th December",
+      title: "REGISTRATION & TEAM FORMATION",
+      description: "Register and form your teams (5th Dec, 05:30 AM - 29th Dec, 05:30 AM IST)",
       icon: Users,
       color: "blue",
       day: "Phase 1",
     },
     {
-      time: "29th December",
-      title: "REGISTRATION CLOSES",
-      description: "Last date to register",
-      icon: Clock,
-      color: "red",
-      day: "Phase 1",
-    },
-    {
       time: "26th - 31st December",
       title: "PPT SUBMISSION ROUND",
-      description: "Submit your idea presentations during this window",
-      icon: Calendar,
+      description: "Submit your project presentations (26th Dec, 12:00 AM - 31st Dec, 11:59 PM IST)",
+      icon: FileText,
       color: "green",
+      day: "Phase 2",
+    },
+    {
+      time: "1st January",
+      title: "INITIAL EVALUATIONS",
+      description: "Judging panel evaluates all submissions (1st Jan, 05:30 AM IST)",
+      icon: Clock,
+      color: "orange",
       day: "Phase 2",
     },
     {
       time: "2nd January",
       title: "PPT ROUND RESULTS",
-      description: "Selected teams for prototype round are announced",
+      description: "Selected teams for prototype round announced (2nd Jan, 12:00 AM - 11:59 PM IST)",
       icon: Trophy,
       color: "yellow",
       day: "Phase 2",
@@ -92,25 +108,41 @@ export const ScheduleSection: React.FC = () => {
     {
       time: "4th - 10th January",
       title: "PROTOTYPE ROUND",
-      description: "Shortlisted teams work on and submit prototypes",
+      description: "Shortlisted teams build and submit prototypes (4th Jan, 12:00 AM - 10th Jan, 11:59 PM IST)",
       icon: Users,
       color: "purple",
       day: "Phase 3",
     },
     {
-      time: "12th January",
-      title: "PROTOTYPE ROUND RESULTS",
-      description: "Finalist teams announced for the final showdown",
-      icon: Trophy,
-      color: "orange",
+      time: "10th - 12th January",
+      title: "PROTOTYPE EVALUATION",
+      description: "Expert panel evaluates all prototypes (10th Jan, 12:00 AM - 12th Jan, 11:59 PM IST)",
+      icon: Clock,
+      color: "cyan",
+      day: "Phase 3",
+    },
+    {
+      time: "13th January",
+      title: "TOP 10 TEAMS ANNOUNCEMENT",
+      description: "Initial top 10 finalist teams revealed (13th Jan, 12:00 AM - 11:59 PM IST)",
+      icon: Award,
+      color: "pink",
       day: "Phase 3",
     },
     {
       time: "17th January",
-      title: "OFFLINE FINAL ROUND",
-      description: "Final hackathon at GLA University",
+      title: "FINAL OFFLINE ROUND",
+      description: "8-hour final hackathon at GLA University (17th Jan, 12:00 AM - 11:59 PM IST)",
       icon: MapPin,
-      color: "blue",
+      color: "red",
+      day: "Final Phase",
+    },
+    {
+      time: "17th January",
+      title: "TOP 3 ANNOUNCEMENT",
+      description: "Winners announced! (17th Jan, 05:30 AM IST)",
+      icon: Trophy,
+      color: "yellow",
       day: "Final Phase",
     },
   ];
@@ -127,7 +159,7 @@ export const ScheduleSection: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Multi-stage competition spanning from December to January. Follow the
-            complete journey from registration to the final hackathon at
+            complete journey from registration to the final 8-hour hackathon at
             GLA University.
           </p>
         </div>
@@ -241,16 +273,16 @@ export const ScheduleSection: React.FC = () => {
               READY TO JOIN THE MULTIVERSE?
             </h3>
             <p className="text-gray-300 mb-6">
-              Save the date and prepare for an epic innovation showdown at GLA University.
+              Save the date and prepare for an epic 8-hour innovation showdown at GLA University on 17th January 2026.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => {
                   const event = {
                     title: 'Marvel Multiverse Hackathon - Final Round',
-                    start: '2026-01-17T09:00:00',
-                    end: '2026-01-17T18:00:00',
-                    description: 'Final hackathon round at GLA University',
+                    start: '2026-01-17T00:00:00',
+                    end: '2026-01-17T23:59:00',
+                    description: 'Final 8-hour hackathon round at GLA University',
                     location: 'GLA University'
                   };
                   
@@ -263,7 +295,7 @@ export const ScheduleSection: React.FC = () => {
                 ADD TO CALENDAR
               </button>
               <button 
-                onClick={() => window.open('https://share.google/ClT8ALVfKGH0e1exT', '_blank')}
+                onClick={() => window.open('https://gla.ac.in/', '_blank')}
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200"
               >
                 <MapPin className="w-5 h-5 inline mr-2" />
