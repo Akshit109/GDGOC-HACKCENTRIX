@@ -6,7 +6,7 @@ const mentors = [
     name: "Vanshika Agrawal",
     role: "Community Manager",
     organization: "OSCode",
-    image: "/src/img/Anshika mentor.jpeg",
+    image: "/src/Anshika mentor.jpeg",
     description:
       "Drives engagement, collaborations, and growth within the open-source ecosystem.",
     linkedin: "https://www.linkedin.com/in/vanshika-agrawal-1259a6243",
