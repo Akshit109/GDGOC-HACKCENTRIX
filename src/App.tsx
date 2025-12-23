@@ -7,6 +7,7 @@ import { AboutSection } from "./components/AboutSection";
 import { VisionSection } from "./components/VisionSection";
 import { TracksSection } from "./components/TracksSection";
 import { ScheduleSection } from "./components/ScheduleSection";
+import  MentorSection  from "./components/MentorSection";
 import { Footer } from "./components/Footer";
 import { MusicPlayer } from "./components/MusicPlayer";
 
@@ -35,7 +36,9 @@ function App() {
       <div id="schedule">
         <ScheduleSection />
       </div>
-      
+       <div id ="mentor">
+        <MentorSection />
+       </div>
       <Footer />
       <MusicPlayer />
     </div>
