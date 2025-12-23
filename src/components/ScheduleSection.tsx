@@ -74,15 +74,15 @@ export const ScheduleSection: React.FC = () => {
 
   const scheduleItems = [
     {
-      time: "5th - 29th December",
+      time: "5th - 30th December",
       title: "REGISTRATION & TEAM FORMATION",
-      description: "Register and form your teams (5th Dec, 05:30 AM - 29th Dec, 05:30 AM IST)",
+      description: "Register and form your teams (5th Dec, 05:30 AM - 30th Dec, 05:30 AM IST)",
       icon: Users,
       color: "blue",
       day: "Phase 1",
     },
     {
-      time: "26th - 31st December",
+      time: "26th - 1st January",
       title: "PPT SUBMISSION ROUND",
       description: "Submit your project presentations (26th Dec, 12:00 AM - 31st Dec, 11:59 PM IST)",
       icon: FileText,
@@ -90,7 +90,7 @@ export const ScheduleSection: React.FC = () => {
       day: "Phase 2",
     },
     {
-      time: "1st January",
+      time: "2nd January",
       title: "INITIAL EVALUATIONS",
       description: "Judging panel evaluates all submissions (1st Jan, 05:30 AM IST)",
       icon: Clock,
@@ -98,7 +98,7 @@ export const ScheduleSection: React.FC = () => {
       day: "Phase 2",
     },
     {
-      time: "2nd January",
+      time: "3rd January",
       title: "PPT ROUND RESULTS",
       description: "Selected teams for prototype round announced (2nd Jan, 12:00 AM - 11:59 PM IST)",
       icon: Trophy,
@@ -123,8 +123,8 @@ export const ScheduleSection: React.FC = () => {
     },
     {
       time: "13th January",
-      title: "TOP 10 TEAMS ANNOUNCEMENT",
-      description: "Initial top 10 finalist teams revealed (13th Jan, 12:00 AM - 11:59 PM IST)",
+      title: "TOP 20 TEAMS ANNOUNCEMENT",
+      description: "Initial top 20 finalist teams revealed (13th Jan, 12:00 AM - 11:59 PM IST)",
       icon: Award,
       color: "pink",
       day: "Phase 3",
