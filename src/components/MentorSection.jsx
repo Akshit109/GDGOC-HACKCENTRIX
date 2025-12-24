@@ -14,6 +14,16 @@ const mentors = [
       "https://x.com/__im_theonly__1?t=FJqgwFjeqcoL0LniMyshvA&s=09",
   },
 
+  {
+       id: 2,
+    name: "Anubhav Singh",
+    role: "Xpectro Solutions",
+    image: "https://res.cloudinary.com/df6t1dmcs/image/upload/v1766555050/Anubhav_singh_mentor_tyh3e0.jpg",
+    description:
+      " (Cyber Threat intelligence researcher) Xpectro Solutions",
+    linkedin: "https://www.linkedin.com/in/anubhav-singh-thedatum/",
+  },
+
 ];
 
 const MentorSection = () => {
@@ -52,7 +62,7 @@ const MentorSection = () => {
                 <img
                   src={mentor.image}
                   alt={mentor.name}
-                  className="w-48 h-48 md:w-52 md:h-52 rounded-full object-cover
+                  className="w-48 h-48 md:w-52 md:h-52 rounded-full scale-50;
                              border-4 border-blue-400
                              shadow-[0_0_55px_rgba(99,102,241,0.9)]
                              mb-6"
