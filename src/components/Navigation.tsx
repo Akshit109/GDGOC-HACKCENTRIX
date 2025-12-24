@@ -38,7 +38,7 @@ export const Navigation: React.FC = () => {
     { name: 'Tracks', href: 'tracks', type: 'scroll' },
   
     { name: 'Schedule', href: 'schedule', type: 'scroll' },
-    { name: 'Mentors', href: 'mentors', type: 'modal' },
+    { name: 'Mentors', href: 'mentor', type: 'scroll' },
     { name: 'FAQs', href: 'faqs', type: 'modal' }
   ];
 
