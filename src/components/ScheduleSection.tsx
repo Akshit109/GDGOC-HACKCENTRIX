@@ -76,7 +76,7 @@ export const ScheduleSection: React.FC = () => {
     {
       time: "5th - 30th December",
       title: "REGISTRATION & TEAM FORMATION",
-      description: "Register and form your teams (5th Dec, 05:30 AM - 30th Dec, 05:30 AM IST)",
+      description: "Register and form your teams (5th Dec, 12:00 AM - 30th Dec, 11:59 PM IST)",
       icon: Users,
       color: "blue",
       day: "Phase 1",
