@@ -299,7 +299,7 @@ export const ScheduleSection: React.FC = () => {
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200"
               >
                 <MapPin className="w-5 h-5 inline mr-2" />
-                GLA UNIVERSITY
+                VENUE : TO BE DECIDED
               </button>
             </div>
           </div>
