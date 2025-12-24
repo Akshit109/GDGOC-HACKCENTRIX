@@ -295,7 +295,6 @@ export const ScheduleSection: React.FC = () => {
                 ADD TO CALENDAR
               </button>
               <button 
-                onClick={() => window.open('https://gla.ac.in/', '_blank')}
                 className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-200"
               >
                 <MapPin className="w-5 h-5 inline mr-2" />
