@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
       registrationStart.setHours(18, 0, 0, 0);
 
       // Registration End: 8 Jan 2026
-      const registrationEnd = new Date("2025-12-29T23:59:59");
+      const registrationEnd = new Date("2025-12-30T23:59:59");
 
       const targetDate = registrationEnd.getTime();
 
@@ -179,11 +179,11 @@ export const HeroSection: React.FC = () => {
           <p className="text-gray-400 text-lg">
             Registration starts on{" "}
             <span className="text-green-400 font-bold">
-              December 09th, 2025
+              December 05th, 2025
             </span>{" "}
             • Registration ends on{" "}
             <span className="text-red-400 font-bold">
-              December 29th, 2025
+              December 30th, 2025
             </span>{" "}
             •{" "}
             <span className="text-yellow-400 font-bold">
