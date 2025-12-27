@@ -10,12 +10,11 @@ import { ScheduleSection } from "./components/ScheduleSection";
 import  MentorSection  from "./components/MentorSection";
 import { Footer } from "./components/Footer";
 import { MusicPlayer } from "./components/MusicPlayer";
-import RegistrationPopup from "./components/RegistrationPopup";
 
 function App() {
   return (
     <div className="relative min-h-screen bg-black overflow-x-hidden">
-      <RegistrationPopup />
+
       <Navigation />
       <VideoHero />
       <TitleSection />
